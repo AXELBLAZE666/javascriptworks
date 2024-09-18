@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (submitBtn && emailInput && passwordInput) {
         submitBtn.onclick = () => {
-            if (emailInput.value === 'example@gmail.com' && passwordInput.value === '1234') {
+            if (emailInput.value === 'example@gmail.com' && passwordInput.value == '1234') {
                 window.location.href = 'dashboard.html';
             } else {
                 alert('Incorrect email or password');
