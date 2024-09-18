@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Works</title>
+
+    <style>
+      body {
+        background-color: #0f0f0f;
+        font-family: Arial, sans-serif;
+      }
+
+      h1 {
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 12%;
+        margin: 0;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        width: 300px;
+        height: 150px;
+        background-color: #222222;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 20px;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        transition: transform 0.3s, background-color 0.3s;
+      }
+
+      .card:hover {
+        background-color: #333333;
+        transform: scale(1.05);
+      }
+
+      .card h2 {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JAVASCRIPT_WORKS</h1>
+    <div class="container">
+      <div class="card" id="card1">
+        <h2>Transactions</h2>
+      </div>
+      <div class="card" id="card2">
+        <h2>Shopping</h2>
+      </div>
+      <div class="card" id="card3">
+        <h2>API</h2>
+      </div>
+    </div>
+    
+    <script>
+      document.getElementById('card1').addEventListener('click', () => {
+        window.location.href = './bank transaction v3/index1.html';
+      });
+
+      document.getElementById('card2').addEventListener('click', () => {
+        window.location.href = './shopping js/index2.html';
+      });
+
+      document.getElementById('card3').addEventListener('click', () => {
+        window.location.href = './API calling/index3.html';
+      });
+    </script>
+  </body>
+</html>

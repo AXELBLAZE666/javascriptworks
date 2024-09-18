@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+        }
+        .main{
+          display:flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap:wrap;
+          gap: 2%;
+          background-color: #0F0F0F;
+        }
+        .maindata{
+          margin: 2%;
+          padding: 2%;
+          background-color: #222222;
+          height: 400px;
+          width: 300px;
+          border-radius: 5%;
+          color: white;
+        }
+        .maindata img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main"></div>
+    <script>
+        async function getData(){
+            let responce = await fetch('https://dummyjson.com/products');
+            let data = await responce.json();
+            let myData = data.products
+            console.log(myData)
+
+            let myRes = myData.map((item)=>{
+                return(
+                    `<div class="maindata">
+                        <img src=${item.images} />
+                        <p>Id.no:${item.id}</p>
+                        <p>Brand Name:${item.brand}</p>
+                        <p>Price:${item.price}</p>
+                    </div>`
+                    
+                )
+            })
+            document.querySelector('.main').innerHTML = myRes
+
+        }
+        getData()
+    </script>
+</body>
+</html>

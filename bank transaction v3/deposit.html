@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="./index1.js"></script>
+  <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <a style="color: white;" class="navbar-brand">Axel Bank</a>
+        <div class="list">
+          <a id="home" class="home">Home</a>
+          <a id="logout" class="logout-text">Logout</a>
+          <span class="logout"><ion-icon name="log-out-outline"></ion-icon></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="d-flex justify-content-center" style="flex-wrap: wrap;">
+    <div id="backdrop" class="col-md-3 ms-5 p-4">
+      <h2>Deposit</h2>
+      <p class="fs-3">
+          ₹ <span id="deposit"></span>
+      </p>
+    </div>
+    <div id="backdrop" class="col-md-3submit-btn ms-5 p-4">
+      <h2>Balance</h2>
+      <p class="fs-3">
+          ₹ <span id="balance"></span>
+      </p>
+  </div>
+  </div>
+  <div class="container">
+    <div id="backdrop" class="col-md-4 container shadow p-4">
+      <h3>Deposit</h3>
+      <input type="number" class="form-control" id="deposit-input" placeholder="Deposit">
+      <br>
+      <button id="deposit-btn">Deposit</button>
+  </div>
+
+  
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
